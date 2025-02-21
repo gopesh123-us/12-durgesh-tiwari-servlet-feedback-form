@@ -12,7 +12,10 @@
 <body>
   <%@include file="header.jsp"%>
   <div class="content_container d-flex flex-column justify-content-center align-items-center">
-    <a class="btn btn-light" href="<%= application.getContextPath() %>/feedback.jsp">Give us feedback</a>
+    <a
+      class="btn btn-light"
+      href="<%=application.getContextPath()%>/feedback.jsp"
+    >Give us feedback</a>
   </div>
   <%@ include file="components/scripts.jsp"%>
 </body>

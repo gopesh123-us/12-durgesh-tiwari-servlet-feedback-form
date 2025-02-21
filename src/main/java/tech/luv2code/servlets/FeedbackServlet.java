@@ -32,8 +32,14 @@ public class FeedbackServlet extends HttpServlet {
 
 		// send response
 		resp.setContentType("text/html");
-		resp.getWriter().print("received");
-		resp.getWriter().print(email + " " + phoneNumber + " " + message);
+		resp.getWriter().print("""
+				<h1>Received</h1>
+				<p>Details: email: %s,
+				<br/>
+				phone: %s,
+				<br/>
+				message: %s</p>
+				""".formatted(email, phoneNumber, message));
 	}
 
 }
