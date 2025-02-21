@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "feedbackServlet", urlPatterns = {"/feedback"})
+@WebServlet(name = "feedbackServlet", urlPatterns = { "/feedback" })
 public class FeedbackServlet extends HttpServlet {
 
 	/**
@@ -33,7 +33,7 @@ public class FeedbackServlet extends HttpServlet {
 		// send response
 		resp.setContentType("text/html");
 		resp.getWriter().print("received");
-		resp.getWriter().print(email + " " + phoneNumber + " " + message);
+		resp.getWriter().print("Your data: " + email + " " + phoneNumber + " " + message);
 	}
 
 }
