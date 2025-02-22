@@ -25,6 +25,10 @@
       class="btn btn-warning btn-block"
       href="<%=application.getContextPath()%>/getCookie"
     >Get Cookie Information</a>
+    <a
+      class="btn btn-warning btn-block"
+      href="<%=application.getContextPath()%>/counter"
+    >Counter servlet visits</a>
   </div>
   </div>
     
