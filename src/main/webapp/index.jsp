@@ -29,6 +29,10 @@
       class="btn btn-warning btn-block"
       href="<%=application.getContextPath()%>/counter"
     >Counter servlet visits</a>
+    <a
+      class="btn btn-warning btn-block"
+      href="<%=application.getContextPath()%>/configcontext"
+    >Get App Name</a>
   </div>
   </div>
     
