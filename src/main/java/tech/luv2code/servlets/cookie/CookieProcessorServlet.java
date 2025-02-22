@@ -8,6 +8,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet(name = "getCookieServlet", urlPatterns = { "/getCookie" })
 public class CookieProcessorServlet extends HttpServlet {
@@ -19,11 +20,15 @@ public class CookieProcessorServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		var content = new StringBuffer();
+		HttpSession session = req.getSession();
+		content.append("Session id: " + session.getId().toString() + "</br>");
+		content.append("UUID: " + session.getAttribute("secret") + "</br>");
 		// check cookies
 		var cookies = req.getCookies();
 		resp.setContentType("text/html");
 		var writer = resp.getWriter();
-		var content = new StringBuffer();
+
 		if (cookies != null) {
 			boolean hasCookie = false;
 			for (Cookie c : cookies) {

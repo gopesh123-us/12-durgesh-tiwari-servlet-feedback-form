@@ -1,6 +1,7 @@
 package tech.luv2code.servlets.cookie;
 
 import java.io.IOException;
+import java.util.UUID;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,6 +9,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet(name = "cookieSetter", urlPatterns = { "/setCookie" })
 public class CookieSetterServlet extends HttpServlet {
@@ -23,6 +25,8 @@ public class CookieSetterServlet extends HttpServlet {
 		// TODO get these values from database;
 		String user = "Sam_Bahadhur";
 		String userId = "7898";
+		HttpSession session = req.getSession();
+		session.setAttribute("secret", UUID.randomUUID().toString());
 		Cookie[] cookies = req.getCookies();
 
 		if (cookies != null) {
