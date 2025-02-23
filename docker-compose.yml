@@ -1,0 +1,35 @@
+services:
+  mysqldb:
+    image: mysql:latest
+    container_name: mysql_container
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: Guruji123$
+        MYSQL_USERNAME: root
+        MYSQL_DATABASE: feedback_db
+        MYSQL_CHARSET: utf8mb4
+        MYSQL_COLLATION: utf8mb4_unicode_ci
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app_network  
+      
+  tomcat:
+    build: .
+    container_name: tomcat_container
+    restart: always
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+    networks:
+      - app_network 
+       
+volumes:
+  mysql-data:
+networks:
+  app_network: 
+    driver: bridge             

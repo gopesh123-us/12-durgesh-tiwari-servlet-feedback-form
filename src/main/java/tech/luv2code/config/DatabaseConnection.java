@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DatabaseConnection {
-	private String DB_URL = "jdbc:mysql://localhost:3306/feedback_db";
+	private String DB_URL = "jdbc:mysql://mysqldb:3306/feedback_db";
 	private String USER_NAME = "root";
 	private String PASSWORD = "Guruji123$";
 	Connection connection = null;
