@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DatabaseConnection {
-	private String DB_URL = "jdbc:mysql://mysqldb:3306/feedback_db";
+	private String DB_URL = "jdbc:mysql://mysqldb:3306/feedback_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 	private String USER_NAME = "root";
-	private String PASSWORD = "root";
+	private String PASSWORD = "AmazingNews123$";
 	Connection connection = null;
 
 	public Connection getConnection() throws ClassNotFoundException {
