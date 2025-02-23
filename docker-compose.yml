@@ -10,7 +10,7 @@ services:
     container_name: mysql_container
     restart: always
     environment:
-      - MYSQL_ROOT_PASSWORD=AmazingNews123$$
+      - MYSQL_ROOT_PASSWORD=AmazingNews123
       - MYSQL_USERNAME=root                   
       - MYSQL_DATABASE=feedback_db
     ports:
