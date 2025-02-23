@@ -65,7 +65,6 @@ public class FeedbackController extends HttpServlet {
 				<p>Your feedback is: %s</p>
 				""".formatted(result, messageString));
 		writer.print(content);
-
 	}
 
 }
