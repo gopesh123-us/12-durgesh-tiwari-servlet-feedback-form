@@ -1,17 +1,18 @@
 package tech.luv2code.model.service;
 
+import java.sql.SQLException;
 import java.util.List;
 
-import tech.luv2code.model.entity.Feedback;
+import tech.luv2code.model.entity.FeedbackEntity;
 
 public interface FeedbackServiceInterface {
-	Feedback saveFeedback(Feedback feedback);
+	int saveFeedback(FeedbackEntity feedback) throws SQLException;
 
-	Feedback getFeedback(int feedbackId);
+	FeedbackEntity getFeedback(int feedbackId);
 
-	List<Feedback> getAllFeedback();
+	List<FeedbackEntity> getAllFeedback();
 
-	Feedback updateFeedback(Feedback feedback);
+	FeedbackEntity updateFeedback(FeedbackEntity feedback);
 
 	void deleteFeedback(int feedbackId);
 

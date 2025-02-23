@@ -1,8 +1,9 @@
 package tech.luv2code.model.entity;
 
-public class Feedback {
+public class FeedbackEntity {
 	private String id;
 	private String email;
+	private String phone;
 	private String feedback;
 
 	public String getId() {
@@ -19,6 +20,14 @@ public class Feedback {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	public String getFeedback() {

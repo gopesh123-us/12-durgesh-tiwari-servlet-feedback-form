@@ -15,7 +15,7 @@
 		<h1 class="text-center py-4 mb-4">Fill the feedback form</h1>
 		<!-- start of form -->
 		<form
-			action="<%=application.getContextPath()%>/feedback"
+			action="<%=application.getContextPath()%>/processFeedback"
 			method="POST"
 		>
 
